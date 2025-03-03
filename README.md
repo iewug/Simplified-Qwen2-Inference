@@ -2,7 +2,7 @@
 
 ## 1. About
 
-For better understanding how LLM works, I separated and simplified the Qwen2 model from the original `transformers` package. Therefore, Pytorch and safetensors are the only packages required. Also, detailed code comments were made (although many in Chinese).
+For better understanding how LLM works, I separated and simplified the Qwen2 model from the original `transformers` package. Therefore, Pytorch and safetensors are the only packages required. Also, detailed code comments were made (although many in Chinese). Approximately 30GB of GPU memory is required.
 
 ## 2. Preparation
 
