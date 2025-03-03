@@ -1,0 +1,1 @@
+Put `model-00001-of-000004.safetensors`, `model-00002-of-000004.safetensors`, `model-00003-of-000004.safetensors` and `model-00004-of-000004.safetensors` here.
