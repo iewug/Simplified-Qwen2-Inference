@@ -422,7 +422,7 @@ class Qwen2ForCausalLM(nn.Module):
         Returns
         -------
         logits: torch.Tensor
-            预测未来一个token的logits (bs,vocab_size)
+            最后logits_to_keep个token的logits (bs,logits_to_keep,vocab_size)
         past_key_values: Optional[DynamicCache]
             若use_cache则KV cache, 不然为None
         '''
