@@ -2,7 +2,14 @@
 
 ## 1. About
 
-For better understanding how LLM works, I separated and simplified the Qwen2 model from the original `transformers` package. Therefore, Pytorch and safetensors are the only packages required. Also, detailed code comments were made (although many in Chinese). Approximately 30GB of GPU memory is required.
+For better understanding how LLM works, I separated and simplified the Qwen2 model from the original `transformers` package. Therefore, PyTorch and safetensors are the only packages required. Also, detailed code comments were made (although many in Chinese).
+
+Some other details:
+
+- Generative dialogue and batch input are supported.
+- Attention Implementation: Eager, rather than sdpa or FlashAttention
+- For simplicity, the code is run on a single gpu. Therefore, the GPU should have more than 30GB memory with `deepseek-r1-distill-qwen-14B` model. However, if you use smaller models, it can be solved.
+- The tokenizer differs from the one from `transformers` package in terms of api and part of implementation.
 
 ## 2. Preparation
 

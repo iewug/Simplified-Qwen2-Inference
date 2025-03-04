@@ -435,5 +435,5 @@ class Qwen2ForCausalLM(nn.Module):
             cache_position=cache_position
         ) # (hidden_states, past_key_values)
         hidden_states = outputs[0]
-        logits = self.lm_head(hidden_states[:, -logits_to_keep:, :]) # (bs,qryLen,hidden_size) -> (bs,hidden_size) -> (bs,vocab_size)
+        logits = self.lm_head(hidden_states[:, -logits_to_keep:, :]) # (bs,qryLen,hidden_size) -> (bs,logits_to_keep,hidden_size) -> (bs,logits_to_keep,vocab_size)
         return logits, outputs[1]
